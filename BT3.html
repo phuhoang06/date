@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ktra</title>
+</head>
+<body>
+<input type="number" id="number" placeholder="Nhập số vào đây!">
+<input type="button" value="Kiểm tra" onclick="ktrai()" >
+<script>
+  function ktrai(){
+    let a = parseFloat(document.getElementById("number").value);
+    if (a > 0){
+      alert('số này lớn hơn 0')
+
+    }
+    else if(a == 0){
+      alert('=0')
+    }
+    else{
+      alert('số này nhỏ hơn 0')
+    }
+  }
+</script>
+</body>
+</html>

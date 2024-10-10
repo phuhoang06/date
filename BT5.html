@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xếp hạng học lực</title>
+</head>
+<body>
+<input type="number" id="baik" placeholder="điểm bài kiểm tra!"><br>
+<input type="number" id="baigk" placeholder="kiểm tra giữa kì!"><br>
+<input type="number" id="baick" placeholder="kiểm tra cuối kì!"><br>
+<input type="button" value="Kiểm tra xếp hạng" onClick="xhhs()">
+<script>
+  function xhhs(){
+    let baiktra = parseInt(document.getElementById("baik").value);
+    let baigk = parseInt(document.getElementById("baigk").value);
+    let baick = parseInt(document.getElementById("baick").value);
+    let xh = (baick*3 + baigk*2 + baiktra)/6
+    if (xh >= 8.0){
+      alert('Xếp loại giỏi')
+    }
+    else if (xh >= 6.5){
+      alert("Xếp loại khá")
+    }
+    else {
+      alert('Xếp loại yếu')
+    }
+
+  }
+</script>
+
+
+
+</body>
+</html>

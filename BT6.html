@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tính hoa hồng</title>
+</head>
+<body>
+<input type="number" id="doanhso" placeholder="Nhập doanh số bán hàng"><br>
+<input type="button" value="Tính hoa hồng" onClick="tinhHoaHong()">
+
+<script>
+  function tinhHoaHong() {
+    let doanhSo = parseFloat(document.getElementById("doanhso").value);
+    let hoaHong;
+
+    if (doanhSo < 10000000) {
+      hoaHong = doanhSo * 0.05;  // Hoa hồng 5%
+    }
+    else if (doanhSo >= 10000000 && doanhSo < 20000000) {
+      hoaHong = doanhSo * 0.10;  // Hoa hồng 10%
+    }
+    else if (doanhSo >= 20000000 && doanhSo < 50000000) {
+      hoaHong = doanhSo * 0.15;  // Hoa hồng 15%
+    }
+    else {
+      hoaHong = doanhSo * 0.20;  // Hoa hồng 20%
+    }
+
+    alert("Hoa hồng nhận được: " + hoaHong.toLocaleString() + " đồng");
+  }
+</script>
+</body>
+</html>

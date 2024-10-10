@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ktra</title>
+</head>
+<body>
+<input type="number" id="a" placeholder="Nhập số a vào đây!">
+<input type="number" id="b" placeholder="Nhập số b vào đây!">
+<input type="number" id="c" placeholder="Nhập số c vào đây!">
+<input type="button" value="Kiểm tra" onclick="solonnhat()">
+<script>
+  function solonnhat(){
+    let a = parseFloat(document.getElementById("a").value)
+    let b = parseFloat(document.getElementById("b").value)
+    let c = parseFloat(document.getElementById("c").value)
+    let max;
+
+    if (a > b && a > c) {
+      max = a;
+      alert(max)
+    } else if (b > c) {
+      max = b;
+      alert(max)
+    } else {
+      max = c;
+      alert(max)
+    }
+
+  }
+</script>
+
+</body>
+</html>
